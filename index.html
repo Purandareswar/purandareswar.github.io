@@ -1,79 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Data Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>T.Reddy Purandareswar | Data Portfolio</title>
+
   <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      font-family: Arial;
       margin: 0;
-      background: #0f172a;
-      color: white;
-      text-align: center;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: var(--bg);
+      color: var(--text);
     }
+
     header {
-      padding: 40px;
-      background: #1e293b;
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #1e293b, #020617);
     }
-    h1 {
+
+    header h1 {
       margin: 0;
+      font-size: 2.5rem;
     }
+
+    header p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
     .section {
-      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
     }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
     .card {
-      background: #1e293b;
-      margin: 15px auto;
+      background: var(--card);
       padding: 20px;
-      width: 80%;
-      border-radius: 10px;
+      border-radius: 14px;
+      transition: 0.3s;
+      border: 1px solid #1f2937;
     }
-    a {
-      color: #38bdf8;
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: var(--accent);
+      color: black;
+      border-radius: 8px;
       text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      border: 1px solid #334155;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--muted);
+      border-top: 1px solid #1f2937;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Hi, I'm T.Reddy Purandareswar</h1>
+  <h1>Hi, I'm T.Reddy Purandareswar👋</h1>
   <p>Aspiring Data Analyst | AIML Student</p>
 </header>
 
-<div class="section">
-  <h2>📊 My Projects</h2>
+<section class="section">
+  <h2>📊 Projects</h2>
 
-  <div class="card">
-    <h3>Task 1 - Data Cleaning</h3>
-    <p>Prepared and cleaned raw dataset.</p>
-    <a href="https://github.com/Purandareswar/superstore-data-cleaning.git">View Project</a>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Task 1: Data Cleaning</h3>
+      <p>Cleaned and prepared raw dataset for analysis.</p>
+      <a class="button" href="https://github.com/Purandareswar/superstore-data-cleaning.git">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Task 2: Data Analysis</h3>
+      <p>Performed EDA using Python and extracted insights.</p>
+      <a class="button" href="https://github.com/Purandareswar/superstore-data-cleaning.git">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Task 3: Power BI Dashboard</h3>
+      <p>Built interactive dashboard for sales analysis.</p>
+      <a class="button" href="https://github.com/Purandareswar/PowerBI-Sales-Dashboard.git">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>Task 4: Data Storytelling</h3>
+      <p>Validated insights using hypothesis testing.</p>
+      <a class="button" href="https://github.com/Purandareswar/Task-4-Data-Storytelling.git">View Project</a>
+    </div>
+
   </div>
+</section>
 
-  <div class="card">
-    <h3>Task 2 - Data Analysis</h3>
-    <p>Performed EDA using Python.</p>
-    <a href="https://github.com/Purandareswar/superstore-data-cleaning.git">View Project</a>
+<section class="section">
+  <h2>🛠 Skills</h2>
+  <div class="skills">
+    <div class="skill">Python</div>
+    <div class="skill">Pandas</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Data Analysis</div>
+    <div class="skill">Statistics</div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>Task 3 - Power BI Dashboard</h3>
-    <p>Built interactive sales dashboard.</p>
-    <a href="https://github.com/Purandareswar/PowerBI-Sales-Dashboard.git">View Project</a>
-  </div>
-
-  <div class="card">
-    <h3>Task 4 - Data Storytelling</h3>
-    <p>Business insights with hypothesis testing.</p>
-    <a href="https://github.com/Purandareswar/Task-4-Data-Storytelling.git">View Project</a>
-  </div>
-
-</div>
-
-<div class="section">
+<section class="section">
   <h2>📬 Contact</h2>
-  <p>LinkedIn: <a href="www.linkedin.com/in/t-reddy-purandareswar-a7321a280">Click here</a></p>
-</div>
+  <p style="text-align:center;">
+    <a class="button" href="www.linkedin.com/in/t-reddy-purandareswar-a7321a280">LinkedIn</a>
+  </p>
+</section>
+
+<footer>
+  <p>Built with consistency, not perfection 🚀</p>
+</footer>
 
 </body>
 </html>
